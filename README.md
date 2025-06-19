@@ -1,18 +1,18 @@
-🧠 DocuSense – Document-Based Q&A Retrieval System
+DocuSense – Document-Based Q&A Retrieval System
 
 DocuSense is an intelligent document question-answering system that allows users to upload a document (PDF format), ask natural language questions, and receive context-aware answers. It leverages semantic search techniques and large language models to extract relevant information from unstructured documents.
 
-🚀 Features
+Features
 
-📄 Upload PDF documents for intelligent reading
+1. Upload PDF documents for intelligent reading
 
-🤖 Semantic search powered by SentenceTransformers and FAISS
+2.  Semantic search powered by SentenceTransformers and FAISS
 
-🧠 AI-generated answers using Hugging Face Transformers
+3.  AI-generated answers using Hugging Face Transformers
 
-💬 Interactive Q&A UI built with React.js
+4.  Interactive Q&A UI built with React.js
 
-🌐 Flask backend to serve LLM responses and handle embedding logic
+5.  Flask backend to serve LLM responses and handle embedding logic
 
 🛠️ Tech Stack
 
@@ -25,17 +25,17 @@ DocuSense is an intelligent document question-answering system that allows users
 
 🧾 Project Workflow
 
-Document Upload: User uploads a PDF through the React UI.
+1. Document Upload: User uploads a PDF through the React UI.
 
-Text Extraction: Flask backend parses and chunks the PDF using PyMuPDF.
+2. Text Extraction: Flask backend parses and chunks the PDF using PyMuPDF.
 
-Embedding: Each chunk is vectorized using a SentenceTransformer.
+3. Embedding: Each chunk is vectorized using a SentenceTransformer.
 
-Semantic Search: On question input, relevant chunks are retrieved via FAISS.
+4. Semantic Search: On question input, relevant chunks are retrieved via FAISS.
 
-Answer Generation: LLM uses the question and relevant context to generate an accurate answer.
+5. Answer Generation: LLM uses the question and relevant context to generate an accurate answer.
 
-Response: The answer is sent back to the frontend and displayed in real time.
+6. Response: The answer is sent back to the frontend and displayed in real time.
 
 📂 Folder Structure
 
@@ -72,13 +72,13 @@ npm start
 
 🎯 Future Improvements
 
-Support for DOCX and TXT formats
+1. Support for DOCX and TXT formats
 
-Upload multiple documents and maintain context history
+2. Upload multiple documents and maintain context history
 
-Add authentication for private document handling
+3. Add authentication for private document handling
 
-Dockerize for seamless deployment
+4. Dockerize for seamless deployment
 
 🤝 Contact
 For suggestions or collaboration opportunities, feel free to reach out:
