@@ -1,63 +1,86 @@
-# DocuSense
+🧠 DocuSense – Document-Based Q&A Retrieval System
 
-DocuSense – Q&A Retrieval System
-DocuSense is an AI-powered document-based Question & Answer system that enables users to upload documents (PDFs) and ask natural language questions. It uses semantic search to retrieve relevant chunks from the documents and generates accurate answers using a language model.
+DocuSense is an intelligent document question-answering system that allows users to upload a document (PDF format), ask natural language questions, and receive context-aware answers. It leverages semantic search techniques and large language models to extract relevant information from unstructured documents.
 
-🔍 Features
+🚀 Features
 
-1. Upload and parse documents (PDF format)
-2. Generate dense embeddings using SentenceTransformers
-3. Perform fast and accurate similarity search using FAISS
-4. Retrieve the most relevant document segments based on user queries
-5. Generate context-aware answers using a pre-trained transformer model
-6. Real-time question answering interface using Gradio
+📄 Upload PDF documents for intelligent reading
 
-🛠 Tech Stack
+🤖 Semantic search powered by SentenceTransformers and FAISS
 
-Component	Tech Used
-Embedding Model	SentenceTransformers (MiniLM-L6-v2)
-Vector Store	FAISS (Facebook AI Similarity Search)
-Document Parsing	PyMuPDF (fitz)
-Answer Generation	Hugging Face Transformers (LLMs)
-Frontend UI	Gradio
-Programming Language	Python
+🧠 AI-generated answers using Hugging Face Transformers
 
-📂 Project Structure
+💬 Interactive Q&A UI built with React.js
+
+🌐 Flask backend to serve LLM responses and handle embedding logic
+
+🛠️ Tech Stack
+
+1. Layer	Tools Used
+2. Frontend	React.js, HTML, CSS
+3. Backend	Flask (Python), PyMuPDF (fitz), Transformers
+4. NLP Models	SentenceTransformers (MiniLM), Hugging Face LLMs
+5. Search	FAISS – Fast Approximate Nearest Neighbor Search
+6. Deployment	Flask API, local server (extendable to Render/Heroku)
+
+🧾 Project Workflow
+
+Document Upload: User uploads a PDF through the React UI.
+
+Text Extraction: Flask backend parses and chunks the PDF using PyMuPDF.
+
+Embedding: Each chunk is vectorized using a SentenceTransformer.
+
+Semantic Search: On question input, relevant chunks are retrieved via FAISS.
+
+Answer Generation: LLM uses the question and relevant context to generate an accurate answer.
+
+Response: The answer is sent back to the frontend and displayed in real time.
+
+📂 Folder Structure
 
 DocuSense/
-├── docs/                   # Sample PDFs or test files
-├── utils.py                # Document parsing & chunking utilities
-├── app.py                  # Main Gradio interface
-└── requirements.txt        # Python dependencies
+├── backend/                      # Flask backend logic
+│   ├── app.py                    # Main Flask app
+│   ├── embedding_utils.py        # FAISS + model logic
+│   └── requirements.txt          # Python dependencies
+├── frontend/                     # React frontend
+│   ├── src/
+│   │   └── components/
+│   │       └── UploadForm.js     # File upload and Q&A UI
+│   └── package.json
+└── README.md
 
-🚀 How to Run Locally
-1. Clone the Repository
-git clone https://github.com/YASH212414/DocuSense.git
-cd DocuSense-
+💻 Running Locally
 
-2. Install Dependencies
+🧩 Backend (Flask)
+
+cd backend
+
 pip install -r requirements.txt
 
-3. Run the App
 python app.py
-Gradio will launch a local server in your browser. Upload a document and start asking questions!
 
-🧠 How It Works
+🌐 Frontend (React)
 
-1. Document Upload: User uploads a PDF file.
-2. Text Extraction: The PDF is parsed and split into logical chunks.
-3. Embedding & Indexing: Each chunk is embedded and stored in a FAISS index.
-4. Query Handling: User inputs a question → converted to embedding → nearest relevant chunks retrieved.
-5. Answer Generation: A pre-trained LLM is used to generate a natural response based on the retrieved content.
+cd frontend
 
-📈 Future Improvements
+npm install
 
-1. Support DOCX and TXT files
-2. Add context memory across multi-turn conversations
-3. Allow saving and reusing indexed documents
-4. Deploy on cloud (Hugging Face Spaces / Streamlit Cloud)
+npm start
 
-📬 Contact
 
-For suggestions, improvements, or questions:
+🎯 Future Improvements
+
+Support for DOCX and TXT formats
+
+Upload multiple documents and maintain context history
+
+Add authentication for private document handling
+
+Dockerize for seamless deployment
+
+🤝 Contact
+For suggestions or collaboration opportunities, feel free to reach out:
+
 📧 mudimalayeshwanthgoud@gmail.com
